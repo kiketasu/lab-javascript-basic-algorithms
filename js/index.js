@@ -44,3 +44,25 @@ console.log(counter)
 
 // BONUS 2
 let phraseToCheck = "reconocer";
+// creo una array vacia
+let checkArr = [];
+// hago un loop para meter cada elemento del stringen la array
+for (let i = 0; i < phraseToCheck.length; i++){
+    checkArr.push(phraseToCheck[i])
+};
+console.log(checkArr);
+//declaro nueva array
+let reverseArr = [];
+//ahora recorro esa array desde el final al principio y meto los elementos en una nueva array
+for(let i = checkArr.length - 1; i >= 0; i--){
+reverseArr.push(checkArr[i])
+};
+console.log(reverseArr)
+//convierto la nueva arr a string y la comparo con la string inicial
+let newString = reverseArr.join("");
+
+if(phraseToCheck == newString){
+    console.log("Las palabras son palíndromos");
+}else{
+    console.log("Las palabras NO son palíndromos")
+};
